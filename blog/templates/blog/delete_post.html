@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+{% block title %}Delete Blog Post{{ post.title }}{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+        <h1 ><br/>Delete Post...</h1>
+        <br/><br/>
+        <h3>Delete: {{post.title}}</h3>
+        <br/>
+        <div class="form-group">
+
+        <form method = "post" novalidate form-con>
+            {% csrf_token %}
+        
+            <strong>Are You Sure  deleted this post?</strong><br/>
+            <input type="submit" value="Delete Post"class="btn btn-primary mt-3">
+        </form>
+        </div>
+        {%else%}
+            <h3>You're not allowed here! (and You know it...)</h3>
+        {% endif %}
+
+{% else %}
+
+<h3>You're not allowed here! (and You know it...)</h3>
+{%endif%}
+
+    
+{% endblock  %}

@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% block title %}Register{{ post.title }}{% endblock %}
+{% block content %}
+
+<h1>Register......</h1>
+<br/>
+<br/>
+<div class="form-group">
+<div class="col-md-6 offset-md-2">
+<form method = "post" novalidate form-con>
+    {{form.as_p}}
+    {% csrf_token %}
+   
+    
+    <input type="submit" value="Register"class="btn btn-primary mt-3">
+</form>
+</div>
+</div>
+
+    
+{% endblock  %}

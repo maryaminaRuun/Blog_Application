@@ -1,0 +1,31 @@
+
+{% extends "blog/base.html" %}
+{% block title %}Create A New Blog Post!{{ post.title }}{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+    <h1>Add Post...</h1>
+    <br/><br/>
+    <div class="form-group">
+    <div class="col-md-6 offset-md-3">
+    <form method = "post" novalidate form-con>
+        {{form.media}}
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Post"class="btn btn-primary mt-3">
+    </form>
+    </div>
+    </div>
+    <script>
+
+        var name = {{user.id}};
+        document.getElementById("elder").value = name;
+
+    </script>
+    {% else %}
+
+        <h3>You're not allowed here! (and You know it...)</h3>
+{%endif%}
+    
+{% endblock  %}

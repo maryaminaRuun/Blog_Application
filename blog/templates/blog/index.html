@@ -1,0 +1,28 @@
+{% extends "../base/base.html" %}
+
+{% block title %}
+    Home 
+{% endblock title %}
+        
+{% block content %}
+<div class="container-fluid">
+  <div class="col-md-10 offset-md-1">
+    <a href="{% url 'post:add_post' %}" class="btn btn-success m-4">Add new Post</a>
+    <table class="table table-bordered">
+        
+            {% for post in Post %}
+        
+            
+    
+          {%endfor%}
+         
+        </tbody>
+    </table>
+  </div>
+  </div>
+
+{% endblock content %}
+
+        
+        
+        
