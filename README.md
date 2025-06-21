@@ -8,43 +8,78 @@ This is a Django-based blog application that supports user management, blog post
 
 BLOG_APPLICATION/
 │
+
 ├── env/ # Virtual environment (excluded from version control)
+
 ├── mysite/ # Project root
+
 │ ├── init.py
+
 │ ├── asgi.py
+
 │ ├── settings.py
+
 │ ├── urls.py
+
 │ └── wsgi.py
+
 │
 ├── blog/ # Blog app
+
 │ ├── migrations/
+
 │ ├── static/
+
 │ ├── templates/
+
 │ ├── templatetags/
+
 │ ├── admin.py
+
 │ ├── apps.py
+
 │ ├── feeds.py
+
 │ ├── forms.py
+
 │ ├── models.py
+
 │ ├── sitemaps.py
+
 │ ├── tests.py
+
 │ ├── urls.py
+
 │ └── views.py
+
 │
 ├── members/ # Members/user authentication app
+
 │ ├── migrations/
+
 │ ├── templates/
+
 │ ├── admin.py
+
 │ ├── apps.py
+
 │ ├── forms.py
+
 │ ├── models.py
+
 │ ├── tests.py
+
 │ ├── urls.py
+
 │ └── views.py
+
 │
 ├── db.sqlite3 # SQLite database file
+
 ├── manage.py # Django management script
+
 └── mysite_data.json # Optional project data dump
+
 
 
 ---
